@@ -10,7 +10,7 @@ Some extra methods for GodotArray(C#)
 > using Godot.CollectionsExtens.List; x C# List
 
 ## Methods:
-- Assing
+- Assign
 - Back
 - Front
 - PopAt
