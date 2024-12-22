@@ -119,7 +119,7 @@ public static partial class ArrayExtens
 	/// <param name="items"></param>
 	/// <param name="action"></param>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static void ForEach<[MustBeVariant] T>(GDC::Array<T> items, System.Action<T> action)
+	public static void ForEach<[MustBeVariant] T>(this GDC::Array<T> items, System.Action<T> action)
 	{
 		foreach (T item in items)
 			action(item);
