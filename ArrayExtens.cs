@@ -111,4 +111,17 @@ public static partial class ArrayExtens
 		p_arr.RemoveAt(p_arr.Count - 1);
 		return element;
 	}
+
+	/// <summary>
+	/// Executes a provided function once for each array element.
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="items"></param>
+	/// <param name="action"></param>
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public static void ForEach<[MustBeVariant] T>(GDC::Array<T> items, System.Action<T> action)
+	{
+		foreach (T item in items)
+			action(item);
+	}
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
@@ -110,5 +111,18 @@ public static partial class ListExt
 		T element = p_arr[^1];
 		p_arr.RemoveAt(p_arr.Count - 1);
 		return element;
+	}
+
+	/// <summary>
+	/// Executes a provided function once for each array element.
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="items"></param>
+	/// <param name="action"></param>
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	public static void ForEach<T>(IEnumerable<T> items, Action<T> action)
+	{
+		foreach (T item in items)
+			action(item);
 	}
 }
