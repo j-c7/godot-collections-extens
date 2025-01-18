@@ -30,9 +30,6 @@ Some extra methods for GodotArray(C#)
 > [!TIP]
 > using if you need to convert gdscript code to C# quickly.
 
-> [!CAUTION]
-> Using these methods may be slower.
-
 - AppendArray(AddRange)
 - Erase(Remove)
 - Filter(Where)
