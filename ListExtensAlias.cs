@@ -8,10 +8,10 @@ namespace Godot.CollectionsExtens.List.Alias;
 /// <summary>
 /// We recommend using this library if you need to convert gdscript code to C# quickly.
 /// </summary>
-public static partial class ListExtensAlias 
+public static partial class ListExtensAlias
 {
 	/// <summary>
-	/// 
+	/// Appends another array at the end of this array.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -23,7 +23,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Removes the first occurrence of a specific object from the List<T>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -35,7 +35,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Filters a sequence of values based on a predicate.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -49,7 +49,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Filters a sequence of values based on a predicate.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -63,7 +63,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Returns the zero-based index of the first occurrence of a value in the Array<T> or in a portion of it.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -76,7 +76,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Returns the zero-based index of the first occurrence of a value in the Array<T> or in a portion of it.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -90,7 +90,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Determines whether an element is in the List<T>.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -103,7 +103,9 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Returns a hashed 32-bit integer value representing the array and its contents.
+	///	Note: Arrays with equal hash values are not guaranteed to be the same, 
+	///	as a result of hash collisions. On the countrary, arrays with different hash values are guaranteed to be different. 
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -115,7 +117,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Returns true if the list is empty ([]).
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -127,7 +129,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Projects each element of a sequence into a new form.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TResult"></typeparam>
@@ -142,7 +144,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Projects each element of a sequence into a new form.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TResult"></typeparam>
@@ -170,7 +172,9 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Applies an accumulator function over a sequence. 
+	/// The specified seed value is used as the initial accumulator value, 
+	/// and the specified function is used to select the result value.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TAccumulate"></typeparam>
@@ -186,7 +190,9 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Applies an accumulator function over a sequence. 
+	/// The specified seed value is used as the initial accumulator value, 
+	/// and the specified function is used to select the result value.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TAccumulate"></typeparam>
@@ -204,7 +210,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Returns the zero-based index of the last occurrence of a value in the List<T> or in a portion of it.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
@@ -218,7 +224,7 @@ public static partial class ListExtensAlias
 	}
 
 	/// <summary>
-	/// 
+	/// Gets the number of elements contained in the List<T>.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
