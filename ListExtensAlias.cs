@@ -67,12 +67,12 @@ public static partial class ListExtensAlias
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="item"></param>
+	/// <param name="p_item"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static int Find<T>(this List<T> p_arr, T item)
+	public static int Find<T>(this List<T> p_arr, T p_item)
 	{
-		return p_arr.IndexOf(item);
+		return p_arr.IndexOf(p_item);
 	}
 
 	/// <summary>
@@ -80,13 +80,13 @@ public static partial class ListExtensAlias
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="item"></param>
-	/// <param name="index"></param>
+	/// <param name="p_item"></param>
+	/// <param name="p_index"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static int Find<T>(this List<T> p_arr, T item, int index)
+	public static int Find<T>(this List<T> p_arr, T p_item, int p_index)
 	{
-		return p_arr.IndexOf(item, index);
+		return p_arr.IndexOf(p_item, p_index);
 	}
 
 	/// <summary>
@@ -94,12 +94,12 @@ public static partial class ListExtensAlias
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="item"></param>
+	/// <param name="p_item"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static bool Has<T>(this List<T> p_arr, T item)
+	public static bool Has<T>(this List<T> p_arr, T p_item)
 	{
-		return p_arr.Contains(item);
+		return p_arr.Contains(p_item);
 	}
 
 	/// <summary>
@@ -179,14 +179,14 @@ public static partial class ListExtensAlias
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TAccumulate"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="seed"></param>
+	/// <param name="p_seed"></param>
 	/// <param name="p_func"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static TAccumulate Reduce<T, TAccumulate>(
-		this List<T> p_arr, TAccumulate seed, Func<TAccumulate, T, TAccumulate> p_func)
+		this List<T> p_arr, TAccumulate p_seed, Func<TAccumulate, T, TAccumulate> p_func)
 	{
-		return p_arr.Aggregate(seed, p_func);
+		return p_arr.Aggregate(p_seed, p_func);
 	}
 
 	/// <summary>
@@ -198,15 +198,15 @@ public static partial class ListExtensAlias
 	/// <typeparam name="TAccumulate"></typeparam>
 	/// <typeparam name="TResult"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="seed"></param>
+	/// <param name="p_seed"></param>
 	/// <param name="p_func"></param>
-	/// <param name="resultSelector"></param>
+	/// <param name="p_resultSelector"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static TResult Reduce<T, TAccumulate, TResult>(
-		this List<T> p_arr, TAccumulate seed, Func<TAccumulate, T, TAccumulate> p_func, Func<TAccumulate, TResult> resultSelector)
+		this List<T> p_arr, TAccumulate p_seed, Func<TAccumulate, T, TAccumulate> p_func, Func<TAccumulate, TResult> p_resultSelector)
 	{
-		return p_arr.Aggregate(seed, p_func, resultSelector);
+		return p_arr.Aggregate(p_seed, p_func, p_resultSelector);
 	}
 
 	/// <summary>
@@ -214,13 +214,13 @@ public static partial class ListExtensAlias
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="p_arr"></param>
-	/// <param name="item"></param>
-	/// <param name="index"></param>
+	/// <param name="p_item"></param>
+	/// <param name="p_index"></param>
 	/// <returns></returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static int RFind<T>(this List<T> p_arr, T item, int index)
+	public static int RFind<T>(this List<T> p_arr, T p_item, int p_index)
 	{
-		return p_arr.LastIndexOf(item, index);
+		return p_arr.LastIndexOf(p_item, p_index);
 	}
 
 	/// <summary>

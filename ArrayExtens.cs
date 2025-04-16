@@ -50,13 +50,13 @@ public static partial class ArrayExtens
 	/// that are located after the removed element. 
 	/// The larger the array and the lower the index of the removed element, the slower pop_at will be.
 	/// </summary>
-	/// <param name="position">Index position.</param>
+	/// <param name="p_position">Index position.</param>
 	/// <returns>The element of the array at index position.</returns>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static T PopAt<[MustBeVariant] T>(this GDC::Array<T> p_arr, int position)
+	public static T PopAt<[MustBeVariant] T>(this GDC::Array<T> p_arr, int p_position)
 	{
-		T element = p_arr[position];
-		p_arr.RemoveAt(position);
+		T element = p_arr[p_position];
+		p_arr.RemoveAt(p_position);
 		return element;
 	}
 
@@ -65,21 +65,21 @@ public static partial class ArrayExtens
 	/// Note: On large arrays, this method is much slower than push_back as it will reindex all the array's elements every time it's called. 
 	/// The larger the array, the slower push_front will be.
 	/// </summary>
-	/// <param name="item">Element.</param>
+	/// <param name="p_item">Element.</param>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static void PushFront<[MustBeVariant] T>(this GDC::Array<T> p_arr, T item)
+	public static void PushFront<[MustBeVariant] T>(this GDC::Array<T> p_arr, T p_item)
 	{
-		p_arr.Insert(0, item);
+		p_arr.Insert(0, p_item);
 	}
 
 	/// <summary>
 	/// Appends an element at the end of the array. See also push_front.
 	/// </summary>
-	/// <param name="item">Element.</param>
+	/// <param name="p_item">Element.</param>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static void PushBack<[MustBeVariant] T>(this GDC::Array<T> p_arr, T item)
+	public static void PushBack<[MustBeVariant] T>(this GDC::Array<T> p_arr, T p_item)
 	{
-		p_arr.Insert(p_arr.Count, item);
+		p_arr.Insert(p_arr.Count, p_item);
 	}
 
 	/// <summary>
@@ -116,12 +116,12 @@ public static partial class ArrayExtens
 	/// Executes a provided function once for each array element.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	/// <param name="items"></param>
-	/// <param name="action"></param>
+	/// <param name="p_items"></param>
+	/// <param name="p_action"></param>
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
-	public static void ForEach<[MustBeVariant] T>(this GDC::Array<T> items, System.Action<T> action)
+	public static void ForEach<[MustBeVariant] T>(this GDC::Array<T> p_items, System.Action<T> p_action)
 	{
-		foreach (T item in items)
-			action(item);
+		foreach (T item in p_items)
+			p_action(item);
 	}
 }
