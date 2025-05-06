@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Linq;
+using Godot;
 using GDC = Godot.Collections;
 
 namespace Godot.CollectionsExtens.Array.Alias;

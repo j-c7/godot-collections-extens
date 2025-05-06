@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Godot;
 using GDC = Godot.Collections;
 
 namespace Godot.CollectionsExtens.Array;
